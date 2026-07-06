@@ -111,10 +111,16 @@ WEATHER_OPTIONS = {
 cols = st.columns(7)
 default_condition = "⛅ Partly Cloudy"
 pressures = []
-for i, col in enumerate(cols):
+day_labels = [f"Day {i+1}" for i in range(7)]
+
+row1 = st.columns(4)
+row2 = st.columns(3)
+all_cols = row1 + row2
+
+for i, col in enumerate(all_cols):
     with col:
         condition = st.selectbox(
-            f"Day {i + 1}",
+            day_labels[i],
             options=list(WEATHER_OPTIONS.keys()),
             index=list(WEATHER_OPTIONS.keys()).index(default_condition),
             key=f"day_{i}",
