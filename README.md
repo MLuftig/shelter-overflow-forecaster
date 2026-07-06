@@ -51,9 +51,8 @@ much slack you already have* — is arguably more useful than a blanket
 
 ## How It Works
 
-- Enter a 7-day sea-level pressure forecast (or use the defaults, set near the
-  historical average)
 - Set a kennel capacity
+- Select a weather condition (Clear, Rain, Storm, etc.) for each of the next 7 days — each maps to a typical pressure value under the hood
 - The app simulates thousands of possible weeks using the fitted arrival and
   length-of-stay distributions, adjusting daily intake based on that day's
   forecasted pressure
